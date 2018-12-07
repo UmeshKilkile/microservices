@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: zuul-gateway-proxy-service
+
+server:
+  port: 8006
+  
+zuul:
+  routes:
+    route:
+      path: /api/rest/ovenfresh/items
+      service-id: ovenfresh-service
+    route1:
+      path: /api/rest/ovenfresh/itemsWithPrice
+      service-id: ovenfresh-service
+    route3:
+      path: /api/rest/hallimane/items
+      service-id: hallimane-service
+    route4:
+      path: /api/rest/hallimane/itemsWithPrice
+      service-id: hallimane-service
+    route5:
+      path: /api/rest/growfit/items
+      service-id: growfit-service
+    route6:
+      path: /api/rest/growfit/itemsWithPrice
+      service-id: growfit-service
+      
+        
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8001/eureka
+  instance:
+    hostname: localhost

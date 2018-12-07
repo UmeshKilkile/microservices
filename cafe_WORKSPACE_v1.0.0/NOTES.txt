@@ -1,0 +1,13 @@
+Microservices
+	- With microservices, an application is developed, or refactored, into separate services that “speak” to one 
+		another in a well-defined way – via APIs, for instance. 
+	- Each microservice is self-contained, each maintains its own data store (which has significant implications), 
+		and each can be updated independently of others.
+
+API Gateway
+	- An API Gateway is the single point of entry for your entire microservices-based application, presenting the API 
+		for each microservice
+	- The API Gateway is responsible for tasks such as load balancing, caching, access control,
+		API metering, and monitoring
+	- When you choose to build your application as a set of microservices, you need to decide
+		how your application’s clients will interact with the microservices.
